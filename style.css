@@ -1,0 +1,38 @@
+.container {
+display: grid;
+grid-template-rows: 10vh 50vh 20vh 10vh 10vh;
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+grid-template-areas: 
+  "header header header header header"
+  "aside aside  main main main"
+  "aside aside main main main"
+    "pannello pannello pannello pannello pannello"
+  "footer footer footer footer footer";
+gap: 10px;
+height: 100vh;
+}
+
+header{grid-area: header; background-color:aqua}
+main{
+  grid-area: main; background-color: lightblue; place-items: center;
+}
+
+#sketch-holder {
+  
+    aspect-ratio: 1/1;
+    
+}
+
+canvas {
+   display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    aspect-ratio: 1 / 1;
+    margin: auto;
+}
+aside{grid-area: aside; background-color: lightgreen}
+pannello{grid-area: pannello; background-color: rgb(255, 255, 44)}
+footer{grid-area: footer; background-color: lightcoral}
+
